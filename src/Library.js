@@ -75,7 +75,7 @@ function Library({ characterData, onAttributeChange }) {
   };
   
   const libraryStyle = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${process.env.PUBLIC_URL}/images/library.jpg)`
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/images/library.jpg)`
   };
 
   // 骰子组件
@@ -289,7 +289,7 @@ function Library({ characterData, onAttributeChange }) {
             )}
             <img 
               className="girl-image"
-              src={`${process.env.PUBLIC_URL}/images/girl2.png`} 
+              src={`/images/girl2.png`} 
               alt="沈疏桐" 
             />
           </div>

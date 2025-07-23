@@ -76,7 +76,7 @@ function Gym({ characterData, onAttributeChange }) {
   };
   
   const gymStyle = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${process.env.PUBLIC_URL}/images/gym.jpg)`
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/images/gym.jpg)`
   };
 
   // 骰子组件
@@ -296,7 +296,7 @@ function Gym({ characterData, onAttributeChange }) {
             )}
             <img 
               className="girl-image"
-              src={`${process.env.PUBLIC_URL}/images/girl3.png`} 
+              src={`/images/girl3.png`} 
               alt="季清梨" 
             />
           </div>

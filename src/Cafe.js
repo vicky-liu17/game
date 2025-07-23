@@ -76,7 +76,7 @@ function Cafe({ characterData, onAttributeChange }) {
   };
   
   const cafeStyle = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${process.env.PUBLIC_URL}/images/Cafe.jpg)`
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/images/Cafe.jpg)`
   };
 
   // 骰子组件
@@ -303,7 +303,7 @@ function Cafe({ characterData, onAttributeChange }) {
             )}
             <img 
               className="girl-image"
-              src={`${process.env.PUBLIC_URL}/images/girl1.png`} 
+              src={`/images/girl1.png`} 
               alt="池晓瑜" 
             />
           </div>
