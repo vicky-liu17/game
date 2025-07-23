@@ -1,0 +1,119 @@
+/* Dice.css */
+.dice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 20px auto;
+  }
+  
+  .dice-area {
+    perspective: 600px;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+  }
+  
+  .dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.5s ease-out;
+  }
+  
+  .dice.rolling {
+    transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 点的位置 */
+  .center {
+    top: 40px;
+    left: 40px;
+  }
+  
+  .top-left {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .top-right {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .middle-left {
+    top: 40px;
+    left: 10px;
+  }
+  
+  .middle-right {
+    top: 40px;
+    right: 10px;
+  }
+  
+  .bottom-left {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .bottom-right {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  /* 骰子各面的位置 */
+  .front {
+    transform: translateZ(50px);
+  }
+  
+  .back {
+    transform: rotateY(180deg) translateZ(50px);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(50px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(50px);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(50px);
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+  }
+  
+  /* 骰子包装器 */
+  .dice-wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px auto;
+    width: 150px;
+  }
