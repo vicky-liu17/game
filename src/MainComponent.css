@@ -1,0 +1,168 @@
+/* MainComponent.css */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    max-width: 360px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .map-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    height: calc(100% - 100px); /* 减小地图高度 */
+    min-height: 180px;
+  }
+  
+  .map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .place-icon {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .icon {
+    width: 24px; /* 减小图标尺寸 */
+    height: 24px; /* 减小图标尺寸 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px; /* 减小图标字体 */
+  }
+  
+  .place-name {
+    font-size: 10px; /* 减小字体尺寸 */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1px 3px;
+    border-radius: 6px;
+    margin-top: 2px;
+    white-space: nowrap;
+  }
+  
+  .drag-icon {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  
+  .timeline-container {
+    height: 100px; /* 减小高度 */
+    background-color: white;
+    padding: 6px; /* 减小内边距 */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  
+  .timeline-title {
+    font-size: 12px; /* 减小字体尺寸 */
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    height: 50px; /* 减小高度 */
+    margin-bottom: 6px;
+  }
+  
+  .timeline-slot {
+    flex: 1;
+    border: 1px solid #ddd;
+    margin: 0 2px; /* 减小间距 */
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  .timeline-slot.filled {
+    background-color: #e8f5e9;
+  }
+  
+  .slot-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .slot-icon {
+    font-size: 16px; /* 减小图标尺寸 */
+    margin-bottom: 1px;
+  }
+  
+  .slot-name {
+    font-size: 8px; /* 减小字体尺寸 */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+  
+  .confirm-button {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 6px; /* 减小内边距 */
+    border-radius: 4px;
+    font-size: 12px; /* 减小字体尺寸 */
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .confirm-button:hover {
+    background-color: #3a80d2;
+  }
+  
+  /* 确保在小屏幕上正确显示 */
+  @media (max-width: 350px) {
+    .timeline-container {
+      height: 90px;
+    }
+    
+    .timeline {
+      height: 45px;
+    }
+    
+    .slot-name {
+      font-size: 7px;
+    }
+  }

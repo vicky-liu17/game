@@ -1,0 +1,123 @@
+/* HomePage.css */
+.home-page {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 角色信息卡牌样式 - 高度更小 */
+  .character-card {
+    display: flex;
+    padding: 8px 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    align-items: center;
+    min-height: 40px;
+  }
+  
+  .character-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  .character-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .character-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .character-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  
+  /* 让属性在一行显示 */
+  .character-attributes {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 5px;
+    padding-bottom: 2px; /* 防止滚动条与底部太近 */
+    white-space: nowrap;
+    scrollbar-width: thin; /* Firefox */
+  }
+  
+  /* 隐藏滚动条但保留功能 */
+  .character-attributes::-webkit-scrollbar {
+    height: 3px;
+  }
+  
+  .character-attributes::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .character-attributes::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+  
+  .attribute-item {
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .attribute-label {
+    font-weight: normal;
+  }
+  
+  .attribute-value {
+    font-weight: bold;
+    margin-left: 2px;
+  }
+  
+  /* 分隔线 */
+  .separator-line {
+    height: 1px;
+    background-color: #ddd;
+    margin: 5px 0;
+  }
+  
+  /* 加载动画 */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .loading-spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #000;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* 主内容区域 */
+  .main-content {
+    margin-top: 10px;
+  }
