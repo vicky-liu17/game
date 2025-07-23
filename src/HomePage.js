@@ -32,6 +32,21 @@ function HomePage() {
     }
   }, [location, navigate]);
 
+  // 处理属性变化的函数
+  const handleAttributeChange = (attributeName, value) => {
+    if (characterData) {
+      const updatedCharacter = {
+        ...characterData,
+        attributes: {
+          ...characterData.attributes,
+          [attributeName]: (characterData.attributes[attributeName] || 0) + value
+        }
+      };
+      setCharacterData(updatedCharacter);
+      localStorage.setItem('characterData', JSON.stringify(updatedCharacter));
+    }
+  };
+
   // 处理时间安排确认
   const handleScheduleConfirm = (confirmedSchedule) => {
     setSchedule(confirmedSchedule);
@@ -55,13 +70,13 @@ function HomePage() {
     const placeName = place.name.toLowerCase();
     
     if (placeName.includes('图书馆')) {
-      return <Library characterData={characterData} />;
+      return <Library characterData={characterData} onAttributeChange={handleAttributeChange} />;
     } else if (placeName.includes('健身房')) {
-      return <Gym characterData={characterData} />;
+      return <Gym characterData={characterData} onAttributeChange={handleAttributeChange} />;
     } else if (placeName.includes('咖啡馆')) {
-      return <Cafe characterData={characterData} />;
+      return <Cafe characterData={characterData} onAttributeChange={handleAttributeChange} />;
     } else if (placeName.includes('商店')) {
-      return <Shop characterData={characterData} />;
+      return <Shop characterData={characterData} onAttributeChange={handleAttributeChange} />;
     } else {
       return (
         <div className="generic-place">
